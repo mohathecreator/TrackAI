@@ -11,7 +11,9 @@ data_recording = DataRecorder()
 while True:
     frame = frame_capturing.capture_frame()
     inputs = input_capturing.capture_input()
-    data_recording.record(frame, inputs)
+
+    if keyboard.is_pressed("up"):
+        data_recording.record(frame, inputs)
 
     if keyboard.is_pressed("esc"):
         print("Finished recording")
