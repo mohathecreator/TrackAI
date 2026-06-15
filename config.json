@@ -1,4 +1,4 @@
 {
-  "keys": ["up", "left", "down", "right"],
-  "recording_trigger": "up"
+  "keys": ["w", "a", "s", "d"],
+  "recording_trigger": "w"
 }
