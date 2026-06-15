@@ -6,11 +6,8 @@ import numpy as np
 class FrameCapture:
     def __init__(self, monitor):
         if monitor is None:
-            self.monitor = {"top": 0,  # Distance from upper screen border
-                            "left": 0,  # Distance from left screen border
-                            "width": 1280,
-                            "height": 720
-                            }
+            sct = mss()
+            self.monitor = sct.monitors[1]
         else:
             self.monitor = monitor
 
