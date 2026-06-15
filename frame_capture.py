@@ -12,15 +12,8 @@ class FrameCapture:
             self.monitor = monitor
 
     def capture_frame(self):
-        # Create mss object by using sct (Screen Capture Task) as variable
         sct = mss()
-
         # Takes screenshot and turns it into Numpy array
         img = np.array(sct.grab(self.monitor))
-        cv2.imshow("Trackmania", img)  # Shows taken screenshot
-
+        img = cv2.resize(img, (1280, 720))
         return img
-
-
-class FrameViewer:
-    pass
