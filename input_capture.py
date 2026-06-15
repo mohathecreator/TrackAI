@@ -1,10 +1,13 @@
 import keyboard
+import json
 
 
 class InputCapture:
-    def __init__(self, keys):
+    def __init__(self, keys=None):
         if keys is None:
-            self.keys = ["left", "right", "up", "down"]
+            with open("config.json", "r") as f:
+                config = json.load(f)
+            self.keys = config["keys"]
         else:
             self.keys = keys
         self.inputs = {}

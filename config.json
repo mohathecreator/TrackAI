@@ -1,0 +1,4 @@
+{
+  "keys": ["up", "left", "down", "right"],
+  "recording_trigger": "up"
+}
